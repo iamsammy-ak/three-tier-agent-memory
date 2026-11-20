@@ -1,0 +1,1018 @@
+{
+  "meta": {
+    "seed": 7,
+    "users": 50,
+    "sessions_per_user": 10,
+    "turns": 7568,
+    "probes": 450,
+    "probes_by_kind": {
+      "changed": 174,
+      "stable": 226,
+      "event": 50
+    },
+    "changed_probes_by_coverage": {
+      "all_covered": 96,
+      "some_uncovered": 78
+    },
+    "k": 5,
+    "budget_tokens": 200,
+    "embedder": "fastembed:BAAI/bge-small-en-v1.5",
+    "question_embedding_ms_p50": 23.559,
+    "token_counter": "approx",
+    "python": "3.13.2",
+    "data": "synthetic (seeded generator in tiered_memory/bench/synthetic.py)",
+    "growth_run": {
+      "users": 10,
+      "sessions_per_user": 40,
+      "seed": 8
+    }
+  },
+  "systems": [
+    {
+      "name": "recency-window",
+      "recall_at_k": 0.0422,
+      "stale_at_k": 0.0,
+      "recall_at_budget": 0.2267,
+      "stale_at_budget": 0.0115,
+      "recall_by_kind": {
+        "changed": 0.0805,
+        "event": 0.02,
+        "stable": 0.0177
+      },
+      "stale_at_k_by_coverage": {
+        "all_covered": 0.0,
+        "some_uncovered": 0.0
+      },
+      "latency_ms_p50": 0.066,
+      "latency_ms_p95": 0.089,
+      "items_per_user": 151.36,
+      "kb_per_user": 4.43,
+      "growth": [
+        {
+          "session": 1,
+          "items": 20.88,
+          "kb": 0.61
+        },
+        {
+          "session": 2,
+          "items": 39.52,
+          "kb": 1.15
+        },
+        {
+          "session": 3,
+          "items": 54.6,
+          "kb": 1.59
+        },
+        {
+          "session": 4,
+          "items": 68.72,
+          "kb": 2.01
+        },
+        {
+          "session": 5,
+          "items": 82.72,
+          "kb": 2.41
+        },
+        {
+          "session": 6,
+          "items": 96.8,
+          "kb": 2.82
+        },
+        {
+          "session": 7,
+          "items": 110.24,
+          "kb": 3.22
+        },
+        {
+          "session": 8,
+          "items": 124.4,
+          "kb": 3.64
+        },
+        {
+          "session": 9,
+          "items": 137.32,
+          "kb": 4.02
+        },
+        {
+          "session": 10,
+          "items": 151.36,
+          "kb": 4.43
+        }
+      ]
+    },
+    {
+      "name": "flat-vector",
+      "recall_at_k": 0.7333,
+      "stale_at_k": 0.7759,
+      "recall_at_budget": 0.8489,
+      "stale_at_budget": 0.8506,
+      "recall_by_kind": {
+        "changed": 0.6149,
+        "event": 0.52,
+        "stable": 0.8717
+      },
+      "stale_at_k_by_coverage": {
+        "all_covered": 0.8021,
+        "some_uncovered": 0.7436
+      },
+      "latency_ms_p50": 0.199,
+      "latency_ms_p95": 0.273,
+      "items_per_user": 151.36,
+      "kb_per_user": 231.47,
+      "growth": [
+        {
+          "session": 1,
+          "items": 20.88,
+          "kb": 31.93
+        },
+        {
+          "session": 2,
+          "items": 39.52,
+          "kb": 60.43
+        },
+        {
+          "session": 3,
+          "items": 54.6,
+          "kb": 83.49
+        },
+        {
+          "session": 4,
+          "items": 68.72,
+          "kb": 105.09
+        },
+        {
+          "session": 5,
+          "items": 82.72,
+          "kb": 126.49
+        },
+        {
+          "session": 6,
+          "items": 96.8,
+          "kb": 148.02
+        },
+        {
+          "session": 7,
+          "items": 110.24,
+          "kb": 168.58
+        },
+        {
+          "session": 8,
+          "items": 124.4,
+          "kb": 190.24
+        },
+        {
+          "session": 9,
+          "items": 137.32,
+          "kb": 210.0
+        },
+        {
+          "session": 10,
+          "items": 151.36,
+          "kb": 231.47
+        }
+      ]
+    },
+    {
+      "name": "tiered",
+      "recall_at_k": 0.8044,
+      "stale_at_k": 0.2241,
+      "recall_at_budget": 0.8778,
+      "stale_at_budget": 0.3046,
+      "recall_by_kind": {
+        "changed": 0.8391,
+        "event": 0.58,
+        "stable": 0.8274
+      },
+      "stale_at_k_by_coverage": {
+        "all_covered": 0.0,
+        "some_uncovered": 0.5
+      },
+      "latency_ms_p50": 1.646,
+      "latency_ms_p95": 4.46,
+      "items_per_user": 19.48,
+      "kb_per_user": 79.32,
+      "growth": [
+        {
+          "session": 1,
+          "items": 4.52,
+          "kb": 15.28
+        },
+        {
+          "session": 2,
+          "items": 7.84,
+          "kb": 27.46
+        },
+        {
+          "session": 3,
+          "items": 9.74,
+          "kb": 35.5
+        },
+        {
+          "session": 4,
+          "items": 11.0,
+          "kb": 41.98
+        },
+        {
+          "session": 5,
+          "items": 12.42,
+          "kb": 48.6
+        },
+        {
+          "session": 6,
+          "items": 13.94,
+          "kb": 55.38
+        },
+        {
+          "session": 7,
+          "items": 15.46,
+          "kb": 61.92
+        },
+        {
+          "session": 8,
+          "items": 17.06,
+          "kb": 68.96
+        },
+        {
+          "session": 9,
+          "items": 18.3,
+          "kb": 74.68
+        },
+        {
+          "session": 10,
+          "items": 19.52,
+          "kb": 79.66
+        }
+      ]
+    },
+    {
+      "name": "tiered-no-supersede",
+      "recall_at_k": 0.7778,
+      "stale_at_k": 0.8046,
+      "recall_at_budget": 0.8778,
+      "stale_at_budget": 0.8851,
+      "recall_by_kind": {
+        "changed": 0.8161,
+        "event": 0.5,
+        "stable": 0.8097
+      },
+      "stale_at_k_by_coverage": {
+        "all_covered": 0.9583,
+        "some_uncovered": 0.6154
+      },
+      "latency_ms_p50": 1.459,
+      "latency_ms_p95": 2.617,
+      "items_per_user": 19.48,
+      "kb_per_user": 79.32,
+      "growth": [
+        {
+          "session": 1,
+          "items": 4.52,
+          "kb": 15.28
+        },
+        {
+          "session": 2,
+          "items": 7.84,
+          "kb": 27.46
+        },
+        {
+          "session": 3,
+          "items": 9.74,
+          "kb": 35.5
+        },
+        {
+          "session": 4,
+          "items": 11.0,
+          "kb": 41.98
+        },
+        {
+          "session": 5,
+          "items": 12.42,
+          "kb": 48.6
+        },
+        {
+          "session": 6,
+          "items": 13.94,
+          "kb": 55.38
+        },
+        {
+          "session": 7,
+          "items": 15.46,
+          "kb": 61.92
+        },
+        {
+          "session": 8,
+          "items": 17.06,
+          "kb": 68.96
+        },
+        {
+          "session": 9,
+          "items": 18.3,
+          "kb": 74.68
+        },
+        {
+          "session": 10,
+          "items": 19.52,
+          "kb": 79.66
+        }
+      ]
+    },
+    {
+      "name": "tiered-no-eviction",
+      "recall_at_k": 0.8044,
+      "stale_at_k": 0.2414,
+      "recall_at_budget": 0.8778,
+      "stale_at_budget": 0.3161,
+      "recall_by_kind": {
+        "changed": 0.8391,
+        "event": 0.58,
+        "stable": 0.8274
+      },
+      "stale_at_k_by_coverage": {
+        "all_covered": 0.0,
+        "some_uncovered": 0.5385
+      },
+      "latency_ms_p50": 1.519,
+      "latency_ms_p95": 2.238,
+      "items_per_user": 19.72,
+      "kb_per_user": 81.3,
+      "growth": [
+        {
+          "session": 1,
+          "items": 4.52,
+          "kb": 15.28
+        },
+        {
+          "session": 2,
+          "items": 7.84,
+          "kb": 27.46
+        },
+        {
+          "session": 3,
+          "items": 9.74,
+          "kb": 35.5
+        },
+        {
+          "session": 4,
+          "items": 11.0,
+          "kb": 41.98
+        },
+        {
+          "session": 5,
+          "items": 12.42,
+          "kb": 48.6
+        },
+        {
+          "session": 6,
+          "items": 13.94,
+          "kb": 55.38
+        },
+        {
+          "session": 7,
+          "items": 15.46,
+          "kb": 61.92
+        },
+        {
+          "session": 8,
+          "items": 17.06,
+          "kb": 68.96
+        },
+        {
+          "session": 9,
+          "items": 18.32,
+          "kb": 74.78
+        },
+        {
+          "session": 10,
+          "items": 19.72,
+          "kb": 81.3
+        }
+      ]
+    }
+  ],
+  "extraction": {
+    "mentions": 629,
+    "recall": 0.7726550079491256,
+    "recall_covered": 1.0,
+    "recall_uncovered": 0.0,
+    "precision": 1.0,
+    "predicted": 486
+  },
+  "consolidation": {
+    "episodes": 500,
+    "raw_tokens": 56609,
+    "kept_tokens": 18315,
+    "kept_share": 0.3235,
+    "facts_added": 339,
+    "facts_superseded": 147,
+    "facts_reinforced": 0
+  },
+  "long_growth": {
+    "flat-vector": [
+      {
+        "session": 1,
+        "items": 21.2,
+        "kb": 32.42
+      },
+      {
+        "session": 2,
+        "items": 39.4,
+        "kb": 60.25
+      },
+      {
+        "session": 3,
+        "items": 54.2,
+        "kb": 82.89
+      },
+      {
+        "session": 4,
+        "items": 67.0,
+        "kb": 102.46
+      },
+      {
+        "session": 5,
+        "items": 80.6,
+        "kb": 123.27
+      },
+      {
+        "session": 6,
+        "items": 94.0,
+        "kb": 143.73
+      },
+      {
+        "session": 7,
+        "items": 108.2,
+        "kb": 165.45
+      },
+      {
+        "session": 8,
+        "items": 120.0,
+        "kb": 183.5
+      },
+      {
+        "session": 9,
+        "items": 133.0,
+        "kb": 203.37
+      },
+      {
+        "session": 10,
+        "items": 144.6,
+        "kb": 221.09
+      },
+      {
+        "session": 11,
+        "items": 158.4,
+        "kb": 242.19
+      },
+      {
+        "session": 12,
+        "items": 171.6,
+        "kb": 262.37
+      },
+      {
+        "session": 13,
+        "items": 184.2,
+        "kb": 281.66
+      },
+      {
+        "session": 14,
+        "items": 197.2,
+        "kb": 301.52
+      },
+      {
+        "session": 15,
+        "items": 210.0,
+        "kb": 321.09
+      },
+      {
+        "session": 16,
+        "items": 224.4,
+        "kb": 343.12
+      },
+      {
+        "session": 17,
+        "items": 237.4,
+        "kb": 363.0
+      },
+      {
+        "session": 18,
+        "items": 249.6,
+        "kb": 381.67
+      },
+      {
+        "session": 19,
+        "items": 260.4,
+        "kb": 398.16
+      },
+      {
+        "session": 20,
+        "items": 273.2,
+        "kb": 417.73
+      },
+      {
+        "session": 21,
+        "items": 285.6,
+        "kb": 436.7
+      },
+      {
+        "session": 22,
+        "items": 298.6,
+        "kb": 456.57
+      },
+      {
+        "session": 23,
+        "items": 311.2,
+        "kb": 475.85
+      },
+      {
+        "session": 24,
+        "items": 323.2,
+        "kb": 494.21
+      },
+      {
+        "session": 25,
+        "items": 335.2,
+        "kb": 512.55
+      },
+      {
+        "session": 26,
+        "items": 348.6,
+        "kb": 533.05
+      },
+      {
+        "session": 27,
+        "items": 363.0,
+        "kb": 555.08
+      },
+      {
+        "session": 28,
+        "items": 377.4,
+        "kb": 577.09
+      },
+      {
+        "session": 29,
+        "items": 388.6,
+        "kb": 594.2
+      },
+      {
+        "session": 30,
+        "items": 401.6,
+        "kb": 614.08
+      },
+      {
+        "session": 31,
+        "items": 413.4,
+        "kb": 632.12
+      },
+      {
+        "session": 32,
+        "items": 427.0,
+        "kb": 652.9
+      },
+      {
+        "session": 33,
+        "items": 441.8,
+        "kb": 675.52
+      },
+      {
+        "session": 34,
+        "items": 454.2,
+        "kb": 694.46
+      },
+      {
+        "session": 35,
+        "items": 467.2,
+        "kb": 714.35
+      },
+      {
+        "session": 36,
+        "items": 481.6,
+        "kb": 736.37
+      },
+      {
+        "session": 37,
+        "items": 494.2,
+        "kb": 755.63
+      },
+      {
+        "session": 38,
+        "items": 507.2,
+        "kb": 775.52
+      },
+      {
+        "session": 39,
+        "items": 521.8,
+        "kb": 797.82
+      },
+      {
+        "session": 40,
+        "items": 535.6,
+        "kb": 818.89
+      }
+    ],
+    "tiered-no-eviction": [
+      {
+        "session": 1,
+        "items": 3.8,
+        "kb": 13.8
+      },
+      {
+        "session": 2,
+        "items": 7.7,
+        "kb": 26.78
+      },
+      {
+        "session": 3,
+        "items": 9.1,
+        "kb": 33.23
+      },
+      {
+        "session": 4,
+        "items": 10.2,
+        "kb": 39.02
+      },
+      {
+        "session": 5,
+        "items": 11.3,
+        "kb": 45.14
+      },
+      {
+        "session": 6,
+        "items": 12.5,
+        "kb": 51.09
+      },
+      {
+        "session": 7,
+        "items": 13.5,
+        "kb": 57.21
+      },
+      {
+        "session": 8,
+        "items": 14.5,
+        "kb": 62.35
+      },
+      {
+        "session": 9,
+        "items": 15.6,
+        "kb": 67.64
+      },
+      {
+        "session": 10,
+        "items": 16.7,
+        "kb": 72.44
+      },
+      {
+        "session": 11,
+        "items": 17.8,
+        "kb": 78.88
+      },
+      {
+        "session": 12,
+        "items": 18.8,
+        "kb": 84.52
+      },
+      {
+        "session": 13,
+        "items": 19.9,
+        "kb": 90.64
+      },
+      {
+        "session": 14,
+        "items": 20.9,
+        "kb": 95.78
+      },
+      {
+        "session": 15,
+        "items": 21.9,
+        "kb": 100.75
+      },
+      {
+        "session": 16,
+        "items": 23.0,
+        "kb": 107.37
+      },
+      {
+        "session": 17,
+        "items": 24.3,
+        "kb": 113.17
+      },
+      {
+        "session": 18,
+        "items": 25.3,
+        "kb": 118.31
+      },
+      {
+        "session": 19,
+        "items": 26.3,
+        "kb": 123.1
+      },
+      {
+        "session": 20,
+        "items": 27.5,
+        "kb": 128.88
+      },
+      {
+        "session": 21,
+        "items": 28.5,
+        "kb": 134.35
+      },
+      {
+        "session": 22,
+        "items": 29.7,
+        "kb": 140.14
+      },
+      {
+        "session": 23,
+        "items": 30.8,
+        "kb": 145.45
+      },
+      {
+        "session": 24,
+        "items": 31.9,
+        "kb": 150.9
+      },
+      {
+        "session": 25,
+        "items": 32.9,
+        "kb": 155.71
+      },
+      {
+        "session": 26,
+        "items": 34.0,
+        "kb": 161.67
+      },
+      {
+        "session": 27,
+        "items": 35.2,
+        "kb": 168.13
+      },
+      {
+        "session": 28,
+        "items": 36.4,
+        "kb": 174.74
+      },
+      {
+        "session": 29,
+        "items": 37.4,
+        "kb": 179.05
+      },
+      {
+        "session": 30,
+        "items": 38.5,
+        "kb": 184.67
+      },
+      {
+        "session": 31,
+        "items": 39.5,
+        "kb": 189.97
+      },
+      {
+        "session": 32,
+        "items": 40.5,
+        "kb": 195.44
+      },
+      {
+        "session": 33,
+        "items": 41.7,
+        "kb": 201.73
+      },
+      {
+        "session": 34,
+        "items": 42.8,
+        "kb": 207.18
+      },
+      {
+        "session": 35,
+        "items": 43.9,
+        "kb": 212.49
+      },
+      {
+        "session": 36,
+        "items": 44.9,
+        "kb": 218.29
+      },
+      {
+        "session": 37,
+        "items": 46.0,
+        "kb": 224.08
+      },
+      {
+        "session": 38,
+        "items": 47.3,
+        "kb": 230.2
+      },
+      {
+        "session": 39,
+        "items": 48.3,
+        "kb": 236.33
+      },
+      {
+        "session": 40,
+        "items": 49.4,
+        "kb": 242.44
+      }
+    ],
+    "tiered": [
+      {
+        "session": 1,
+        "items": 3.8,
+        "kb": 13.8
+      },
+      {
+        "session": 2,
+        "items": 7.7,
+        "kb": 26.78
+      },
+      {
+        "session": 3,
+        "items": 9.1,
+        "kb": 33.23
+      },
+      {
+        "session": 4,
+        "items": 10.2,
+        "kb": 39.02
+      },
+      {
+        "session": 5,
+        "items": 11.3,
+        "kb": 45.14
+      },
+      {
+        "session": 6,
+        "items": 12.5,
+        "kb": 51.09
+      },
+      {
+        "session": 7,
+        "items": 13.5,
+        "kb": 57.21
+      },
+      {
+        "session": 8,
+        "items": 14.5,
+        "kb": 62.35
+      },
+      {
+        "session": 9,
+        "items": 15.5,
+        "kb": 67.31
+      },
+      {
+        "session": 10,
+        "items": 16.4,
+        "kb": 70.28
+      },
+      {
+        "session": 11,
+        "items": 16.9,
+        "kb": 72.38
+      },
+      {
+        "session": 12,
+        "items": 17.0,
+        "kb": 71.31
+      },
+      {
+        "session": 13,
+        "items": 16.8,
+        "kb": 68.11
+      },
+      {
+        "session": 14,
+        "items": 16.6,
+        "kb": 65.41
+      },
+      {
+        "session": 15,
+        "items": 16.5,
+        "kb": 64.08
+      },
+      {
+        "session": 16,
+        "items": 16.5,
+        "kb": 65.39
+      },
+      {
+        "session": 17,
+        "items": 16.8,
+        "kb": 65.73
+      },
+      {
+        "session": 18,
+        "items": 16.9,
+        "kb": 65.4
+      },
+      {
+        "session": 19,
+        "items": 16.5,
+        "kb": 63.43
+      },
+      {
+        "session": 20,
+        "items": 16.4,
+        "kb": 61.43
+      },
+      {
+        "session": 21,
+        "items": 16.5,
+        "kb": 62.59
+      },
+      {
+        "session": 22,
+        "items": 16.8,
+        "kb": 64.25
+      },
+      {
+        "session": 23,
+        "items": 16.8,
+        "kb": 63.92
+      },
+      {
+        "session": 24,
+        "items": 16.4,
+        "kb": 61.08
+      },
+      {
+        "session": 25,
+        "items": 16.3,
+        "kb": 58.94
+      },
+      {
+        "session": 26,
+        "items": 16.4,
+        "kb": 60.77
+      },
+      {
+        "session": 27,
+        "items": 16.5,
+        "kb": 61.94
+      },
+      {
+        "session": 28,
+        "items": 16.4,
+        "kb": 61.26
+      },
+      {
+        "session": 29,
+        "items": 16.6,
+        "kb": 62.08
+      },
+      {
+        "session": 30,
+        "items": 17.0,
+        "kb": 64.26
+      },
+      {
+        "session": 31,
+        "items": 17.2,
+        "kb": 65.75
+      },
+      {
+        "session": 32,
+        "items": 16.9,
+        "kb": 65.09
+      },
+      {
+        "session": 33,
+        "items": 16.9,
+        "kb": 65.58
+      },
+      {
+        "session": 34,
+        "items": 17.0,
+        "kb": 65.9
+      },
+      {
+        "session": 35,
+        "items": 17.2,
+        "kb": 66.56
+      },
+      {
+        "session": 36,
+        "items": 17.4,
+        "kb": 68.05
+      },
+      {
+        "session": 37,
+        "items": 17.4,
+        "kb": 69.03
+      },
+      {
+        "session": 38,
+        "items": 17.3,
+        "kb": 68.72
+      },
+      {
+        "session": 39,
+        "items": 17.6,
+        "kb": 71.36
+      },
+      {
+        "session": 40,
+        "items": 17.5,
+        "kb": 70.69
+      }
+    ]
+  },
+  "command": "python -m tiered_memory bench --users 50 --sessions 10 --seed 7 --embedder fastembed --k 5 --budget 200 --growth-users 10 --growth-sessions 40"
+}

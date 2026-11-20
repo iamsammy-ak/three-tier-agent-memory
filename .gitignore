@@ -1,0 +1,20 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.hypothesis/
+.cache/
+dist/
+build/
+# runtime memory stores and logs
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.log
+.tiered-memory/

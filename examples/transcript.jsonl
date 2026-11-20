@@ -1,0 +1,9 @@
+{"session": "2026-03-02", "role": "user", "text": "Hi! I'm Sara. I live in Turin and work at Fiat as a data analyst.", "ts": "2026-03-02T09:00:00"}
+{"session": "2026-03-02", "role": "assistant", "text": "Nice to meet you, Sara!", "ts": "2026-03-02T09:00:20"}
+{"session": "2026-03-02", "role": "user", "text": "Remember that I'm allergic to peanuts.", "ts": "2026-03-02T09:01:10"}
+{"session": "2026-03-02", "role": "user", "text": "My manager is Paolo Ferri and the quarterly report deadline is 20 March.", "ts": "2026-03-02T09:02:30"}
+{"session": "2026-03-02", "role": "user", "text": "The weather is lovely today, finally some sun.", "ts": "2026-03-02T09:03:00"}
+{"session": "2026-03-11", "role": "user", "text": "Quick update: I just moved to Milan last weekend.", "ts": "2026-03-11T18:30:00"}
+{"session": "2026-03-11", "role": "user", "text": "Actually, the quarterly report deadline moved to 27 March.", "ts": "2026-03-11T18:31:00"}
+{"session": "2026-03-11", "role": "user", "text": "My new manager is Giulia Conti.", "ts": "2026-03-11T18:32:00"}
+{"session": "2026-03-11", "role": "user", "text": "I'm presenting the report at the Lisbon offsite on 2 April.", "ts": "2026-03-11T18:33:00"}
